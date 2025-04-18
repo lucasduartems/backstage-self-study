@@ -34,10 +34,20 @@ git init
 git add .
 ```
 
+## Commands
 
+```bash
+# Start frontend (port 3000)
+yarn workspace app start
 
+# Start backend (port 7007)
+yarn workspace backend start
 
+# Start frontend+backend
+yarn start
+```
 
+```
 
 
 ## References
