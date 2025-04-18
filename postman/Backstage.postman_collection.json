@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "6aa7b9db-db62-4756-bc08-325c80593fb7",
+		"name": "Backstage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14852001"
+	},
+	"item": [
+		{
+			"name": "Liveness",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7007/.backstage/health/v1/liveness",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7007",
+					"path": [
+						".backstage",
+						"health",
+						"v1",
+						"liveness"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Readiness",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7007/.backstage/health/v1/liveness",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7007",
+					"path": [
+						".backstage",
+						"health",
+						"v1",
+						"liveness"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
