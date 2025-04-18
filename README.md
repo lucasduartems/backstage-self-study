@@ -54,6 +54,10 @@ http://localhost:7007/.backstage/health/v1/liveness
 http://localhost:7007/.backstage/health/v1/readiness
 ```
 
+## How to
+
+- [Configure a service](https://github.com/lucasduartems/backstage-self-study/commit/4807079278a8fdbb1fa1624f16b926d80166f757)
+
 
 ## References
 
