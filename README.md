@@ -47,9 +47,15 @@ yarn workspace backend start
 yarn start
 ```
 
+## Backend Endpoints
+
+```
+http://localhost:7007/.backstage/health/v1/liveness
+http://localhost:7007/.backstage/health/v1/readiness
 ```
 
 
 ## References
 
 [The Ultimate Backstage Guide (2024 Version) - Backstage with OrkoHunter (Tutorial)](https://youtu.be/r46uFbu9wOs?si=W5Wj4WZKi1sdNvNq)
+[Backstage docs](https://backstage.io/docs)

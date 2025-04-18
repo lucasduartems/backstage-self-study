@@ -32,6 +32,11 @@ backend:
     connection: ':memory:'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
+  # Extra response header for liveness and readiness endpoints
+  health:
+    headers:
+      service-name: My-Portal
+
 integrations:
   github:
     - host: github.com

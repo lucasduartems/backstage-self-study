@@ -1,12 +1,6 @@
-/*
- * Hi!
- *
- * Note that this is an EXAMPLE Backstage backend. Please check the README.
- *
- * Happy hacking!
- */
-
 import { createBackend } from '@backstage/backend-defaults';
+import { coreServices, createServiceFactory, RootHealthService } from '@backstage/backend-plugin-api';
+import { JsonValue } from '@backstage/types/index';
 
 const backend = createBackend();
 
@@ -51,5 +45,32 @@ backend.add(import('@backstage/plugin-search-backend-module-techdocs'));
 
 // kubernetes
 backend.add(import('@backstage/plugin-kubernetes-backend'));
+
+// Readiness and liveness service
+class HealthService implements RootHealthService {
+  getLiveness(): Promise<{ status: number; payload?: JsonValue; }> {
+    return Promise.resolve({
+      status: 200,
+      payload: { status: 'OK' }
+    });
+  }
+
+  getReadiness(): Promise<{ status: number; payload?: JsonValue; }> {
+    return Promise.resolve({
+      status: 200,
+      payload: { status: 'OK' }
+    });
+  }
+}
+
+backend.add(
+  createServiceFactory({
+    service: coreServices.rootHealth,
+    deps: {},
+    factory: ({}) => {
+      return new HealthService();
+    }
+  })
+)
 
 backend.start();
