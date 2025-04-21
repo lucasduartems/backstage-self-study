@@ -35,3 +35,7 @@ backend:
       port: ${POSTGRES_PORT}
       user: ${POSTGRES_USER}
       password: ${POSTGRES_PASSWORD}
+  
+  reading:
+    allow:
+      - host: 'github.com'
