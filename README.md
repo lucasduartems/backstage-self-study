@@ -52,6 +52,9 @@ yarn start
 ```
 http://localhost:7007/.backstage/health/v1/liveness
 http://localhost:7007/.backstage/health/v1/readiness
+
+http://localhost:7007/api/catalog/entities
+http://localhost:7007/api/catalog/entities/by-query?filter=kind=component,metadata.name=my-portal
 ```
 
 ## GitHub OAuth app for authentication

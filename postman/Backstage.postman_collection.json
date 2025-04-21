@@ -49,6 +49,99 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Catalog entities",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TOKEN_HERE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7007/api/catalog/entities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7007",
+					"path": [
+						"api",
+						"catalog",
+						"entities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter catalog entities",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TOKEN_HERE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7007/api/catalog/entities/by-query?filter=kind=component,metadata.name=my-portal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7007",
+					"path": [
+						"api",
+						"catalog",
+						"entities",
+						"by-query"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "kind=component,metadata.name=my-portal"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
