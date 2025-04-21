@@ -81,6 +81,7 @@ yarn --cwd packages/backend add @backstage/plugin-catalog-backend-module-github
 - [Configure a service](https://github.com/lucasduartems/backstage-self-study/commit/4807079278a8fdbb1fa1624f16b926d80166f757)
 - [Set up GitHub authentication](https://github.com/lucasduartems/backstage-self-study/commit/4caca5b1ed99e33e245833d325b376184f29e3fa)
 - [Set up GitHub integration with discovery of catalog entities](https://github.com/lucasduartems/backstage-self-study/commit/e3b474161335539fea487cfd5a2eb4895422a6b3)
+- [Use API refs in the frontend](https://github.com/lucasduartems/backstage-self-study/commit/85dbbe86c5c039eb39acbfff4714ffe5527efd58)
 
 
 ## References
