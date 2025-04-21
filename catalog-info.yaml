@@ -5,6 +5,7 @@ metadata:
   description: An example of a Backstage application.
   annotations:
     github.com/project-slug: lucasduartems/backstage-self-study
+    test-annotation: test-value
 spec:
   type: website
   owner: lucasduartems
