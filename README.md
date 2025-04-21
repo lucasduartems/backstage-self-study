@@ -71,6 +71,7 @@ yarn --cwd packages/backend add @backstage/plugin-auth-backend-module-github-pro
 ## How to
 
 - [Configure a service](https://github.com/lucasduartems/backstage-self-study/commit/4807079278a8fdbb1fa1624f16b926d80166f757)
+- [Set up GitHub authentication](https://github.com/lucasduartems/backstage-self-study/commit/4caca5b1ed99e33e245833d325b376184f29e3fa)
 
 
 ## References
