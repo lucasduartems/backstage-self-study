@@ -1,3 +1,5 @@
+# -*- mode: yaml -*-
+
 auth:
   environment: development
   providers:
@@ -6,3 +8,21 @@ auth:
       development:
         clientId: ${AUTH_GITHUB_CLIENT_ID}
         clientSecret: ${AUTH_GITHUB_CLIENT_SECRET}
+
+integrations:
+  github:
+    - host: github.com
+      token: ${GITHUB_TOKEN}
+
+catalog:
+  providers:
+    github:
+      myProviderId:
+        organization: 'lucasduartems'
+        catalogPath: '/catalog-info.yaml'
+        filters:
+          branch: 'main'
+          repository: '.*'
+        schedule:
+          frequency: { minutes: 30 }
+          timeout: { minutes: 3 }

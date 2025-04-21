@@ -62,10 +62,15 @@ http://localhost:7007/.backstage/health/v1/readiness
     <tr><td><b>Authorization callback URL</b></td><td>http://localhost:7007/api/auth/github/handler/frame</td></tr>
 </table>
 
+## GitHub Personal Access Token (PAT) for Github Integration
+
+At least the `repo` scope for reading components into the Software Catalog.
+
 ## Dependency installation commands
 
 ```bash
 yarn --cwd packages/backend add @backstage/plugin-auth-backend-module-github-provider
+yarn --cwd packages/backend add @backstage/plugin-catalog-backend-module-github
 ```
 
 ## How to
