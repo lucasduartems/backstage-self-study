@@ -76,6 +76,25 @@ yarn --cwd packages/backend add @backstage/plugin-auth-backend-module-github-pro
 yarn --cwd packages/backend add @backstage/plugin-catalog-backend-module-github
 ```
 
+## Command to run PostgreSQL locally
+
+```bash
+docker run -d --name postgres --restart=always -p 5432:5432 -e POSTGRES_USER=<username> -e POSTGRES_PASSWORD=<password> postgres:17.0-bookworm
+```
+
+## Viewing catalog entities in the database after connecting to PostgreSQL
+
+The catalog entities can be seen in the `backstage_plugin_catalog` database:
+
+![databases.png](img/databases.png)
+
+An example query:
+
+```sql
+SELECT * FROM final_entities
+WHERE entity_ref = 'component:default/my-portal'
+```
+
 ## How to
 
 - [Configure a service](https://github.com/lucasduartems/backstage-self-study/commit/4807079278a8fdbb1fa1624f16b926d80166f757)
