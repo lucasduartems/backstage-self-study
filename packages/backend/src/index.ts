@@ -1,6 +1,16 @@
 import { createBackend } from '@backstage/backend-defaults';
-import { coreServices, createServiceFactory, RootHealthService } from '@backstage/backend-plugin-api';
+import { coreServices, createBackendModule, createServiceFactory, RootHealthService } from '@backstage/backend-plugin-api';
+import { stringifyEntityRef } from '@backstage/catalog-model';
+import { githubAuthenticator } from '@backstage/plugin-auth-backend-module-github-provider';
+import {
+  authProvidersExtensionPoint,
+  createOAuthProviderFactory,
+} from '@backstage/plugin-auth-node';
 import { JsonValue } from '@backstage/types/index';
+import dotenv from 'dotenv';
+
+// Read environment variables from .env file
+dotenv.config({path: '../../.env'});
 
 const backend = createBackend();
 
@@ -72,5 +82,47 @@ backend.add(
     }
   })
 )
+
+const customAuthResolver = createBackendModule({
+  pluginId: 'auth',                  // This ID must be exactly "auth" because that's the plugin it targets
+  moduleId: 'custom-auth-provider',  // This ID must be unique, but can be anything
+  register(reg) {
+    reg.registerInit({
+      deps: { providers: authProvidersExtensionPoint },
+      async init({ providers }) {
+        providers.registerProvider({
+          providerId: 'github',                  // auth.providers.github in app-config
+          factory: createOAuthProviderFactory({
+            authenticator: githubAuthenticator,
+            async signInResolver(info, ctx) {
+              // "info" is the sign in result from the upstream (github here)
+              // "ctx" contains useful utilities for token issuance etc.
+              const { result: { fullProfile: { username } } } = info;
+
+              if (!username) {
+                throw new Error('User profile contained no user name');
+              }
+
+              const userEntity = stringifyEntityRef({
+                kind: 'user',
+                name: username,
+                namespace: 'default',
+              })
+
+              return ctx.issueToken({
+                claims: {
+                  sub: userEntity,  // JWT subject claim
+                  ent: [userEntity],
+                },
+              });
+            },
+          }),
+        });
+      },
+    });
+  },
+});
+
+backend.add(customAuthResolver)
 
 backend.start();

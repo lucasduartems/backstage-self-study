@@ -54,6 +54,20 @@ http://localhost:7007/.backstage/health/v1/liveness
 http://localhost:7007/.backstage/health/v1/readiness
 ```
 
+## GitHub OAuth app for authentication
+
+<table>
+    <tr><td><b>Application name</b></td><td>my-portal-oauth-app</td></tr>
+    <tr><td><b>Homepage URL</b></td><td>http://localhost:3000</td></tr>
+    <tr><td><b>Authorization callback URL</b></td><td>http://localhost:7007/api/auth/github/handler/frame</td></tr>
+</table>
+
+## Dependency installation commands
+
+```bash
+yarn --cwd packages/backend add @backstage/plugin-auth-backend-module-github-provider
+```
+
 ## How to
 
 - [Configure a service](https://github.com/lucasduartems/backstage-self-study/commit/4807079278a8fdbb1fa1624f16b926d80166f757)
