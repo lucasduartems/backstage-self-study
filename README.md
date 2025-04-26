@@ -103,6 +103,7 @@ WHERE entity_ref = 'component:default/my-portal'
 - [Use API refs in the frontend](https://github.com/lucasduartems/backstage-self-study/commit/85dbbe86c5c039eb39acbfff4714ffe5527efd58)
 - [Connect to PostgreSQL](https://github.com/lucasduartems/backstage-self-study/commit/e10880ac2d1a9a1d19fa1a1f272b520752802be4)
 - [Display OpenAPI definition](https://github.com/lucasduartems/backstage-self-study/commit/e81be94f2ff5a8ae3f5c0549fddf75c98ef4faba)
+- [Enable TechDocs](https://github.com/lucasduartems/backstage-self-study/commit/dcc2381242867b4377ef705aea2f3d7c643ec61d)
 
 
 ## References
