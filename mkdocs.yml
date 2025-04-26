@@ -1,0 +1,8 @@
+site_name: my-portal
+site_description: An example of a Backstage application
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core

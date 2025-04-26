@@ -6,6 +6,7 @@ metadata:
   annotations:
     github.com/project-slug: lucasduartems/backstage-self-study
     test-annotation: test-value
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: website
   owner: lucasduartems
