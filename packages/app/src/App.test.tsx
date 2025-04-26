@@ -22,7 +22,7 @@ describe('App', () => {
     const rendered = render(<App />);
 
     await waitFor(() => {
-      expect(rendered.baseElement).toBeInTheDocument();
+      expect(rendered.baseElement).not.toBeInTheDocument();
     });
   });
 });
