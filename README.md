@@ -67,7 +67,7 @@ http://localhost:7007/api/catalog/entities/by-query?filter=kind=component,metada
 
 ## GitHub Personal Access Token (PAT) for Github Integration
 
-At least the `repo` scope for reading components into the Software Catalog.
+At least the `repo` scope is nedded for reading components into the Software Catalog.
 
 ## Dependency installation commands
 
@@ -107,5 +107,5 @@ WHERE entity_ref = 'component:default/my-portal'
 
 ## References
 
-[The Ultimate Backstage Guide (2024 Version) - Backstage with OrkoHunter (Tutorial)](https://youtu.be/r46uFbu9wOs?si=W5Wj4WZKi1sdNvNq)
-[Backstage docs](https://backstage.io/docs)
+- [The Ultimate Backstage Guide (2024 Version) - Backstage with OrkoHunter (Tutorial)](https://youtu.be/r46uFbu9wOs?si=W5Wj4WZKi1sdNvNq)
+- [Backstage docs](https://backstage.io/docs)
