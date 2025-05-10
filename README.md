@@ -95,6 +95,20 @@ SELECT * FROM final_entities
 WHERE entity_ref = 'component:default/my-portal'
 ```
 
+## Creating a new frontend plugin
+
+```bash
+$ yarn new
+? What do you want to create? frontend-plugin - A new frontend plugin
+? Enter the ID of the plugin [required] random-joke
+  templating    plugins/random-joke ✔ 
+  app           adding import ✔ 
+  executing     yarn install ✔ 
+  executing     yarn lint --fix ✔ 
+
+🎉  Successfully created frontend-plugin
+```
+
 ## How to
 
 - [Configure a service](https://github.com/lucasduartems/backstage-self-study/commit/4807079278a8fdbb1fa1624f16b926d80166f757)
@@ -105,9 +119,10 @@ WHERE entity_ref = 'component:default/my-portal'
 - [Display OpenAPI definition](https://github.com/lucasduartems/backstage-self-study/commit/e81be94f2ff5a8ae3f5c0549fddf75c98ef4faba)
 - [Enable TechDocs](https://github.com/lucasduartems/backstage-self-study/commit/dcc2381242867b4377ef705aea2f3d7c643ec61d)
 - [Add a frontend plugin](https://github.com/lucasduartems/backstage-self-study/commit/bd918e32cece7b001089fb73d4041222fa915e97)
-
+- [Create a new frontend plugin](https://github.com/lucasduartems/backstage-self-study/commit/816ca75f401152b82707e5af8a0b46a75e1a67c2)
 
 ## References
 
 - [The Ultimate Backstage Guide (2024 Version) - Backstage with OrkoHunter (Tutorial)](https://youtu.be/r46uFbu9wOs?si=W5Wj4WZKi1sdNvNq)
 - [Backstage docs](https://backstage.io/docs)
+- [Backstage Storybook](https://backstage.io/storybook)
